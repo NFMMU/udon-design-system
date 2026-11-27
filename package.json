@@ -1,0 +1,22 @@
+{
+  "name": "udon-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.0",
+    "@astrojs/starlight": "^0.34.0",
+    "@nfmmu/udon-react": "file:../udon-react",
+    "@tailwindcss/vite": "^4.0.0",
+    "astro": "^5.4.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.0.0"
+  }
+}

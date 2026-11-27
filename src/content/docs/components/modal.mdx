@@ -1,0 +1,20 @@
+---
+title: Modal
+description: 確認や入力の割り込み。
+---
+
+import { Modal, Button } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Modal open title="確認" onCancel={() => {}} onConfirm={() => {}}>この操作を続けますか？</Modal>
+</div>
+
+## 使い方
+
+```tsx
+<Modal open={open} title="確認" destructive onConfirm={remove} onCancel={close}>この操作は取り消せません。</Modal>
+```
+
+## 状態と注意
+
+destructive で削除の確認。Escape で閉じる。

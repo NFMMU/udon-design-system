@@ -1,0 +1,21 @@
+---
+title: SegmentedControl
+description: 表示や条件の切り替え。
+---
+
+import { SegmentedControl } from "@nfmmu/udon-react";
+
+<div class="example">
+  <SegmentedControl options={["すべて","公開","下書き"]} value="すべて" />
+  <SegmentedControl size="sm" options={["A","B"]} value="A" />
+</div>
+
+## 使い方
+
+```tsx
+<SegmentedControl options={tabs} value={tab} onChange={setTab} />
+```
+
+## 状態と注意
+
+3〜5個まで。それ以上はタブかセレクトにする。

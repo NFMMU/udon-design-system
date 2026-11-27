@@ -1,0 +1,23 @@
+---
+title: TagItem
+description: 分類や状態を示すタグ。
+---
+
+import { TagItem } from "@nfmmu/udon-react";
+
+<div class="example">
+  <TagItem>タグ</TagItem>
+  <TagItem active>選択中</TagItem>
+  <TagItem size="sm">小</TagItem>
+  <TagItem onRemove={() => {}}>外せる</TagItem>
+</div>
+
+## 使い方
+
+```tsx
+<TagItem active={selected} onRemove={() => remove(id)}>{label}</TagItem>
+```
+
+## 状態と注意
+
+選択状態は色と aria-pressed の両方で示す。

@@ -1,0 +1,21 @@
+---
+title: ListItem
+description: 一覧の1行。
+---
+
+import { ListItem } from "@nfmmu/udon-react";
+
+<div class="example">
+  <ListItem title="項目の名前" description="補足の説明" />
+  <ListItem title="選択中" description="背景で状態を示す" selected />
+</div>
+
+## 使い方
+
+```tsx
+<ListItem title={name} description={desc} selected={active} onClick={select} />
+```
+
+## 状態と注意
+
+矢印は行き先があることを示す。押せない行には付けない。

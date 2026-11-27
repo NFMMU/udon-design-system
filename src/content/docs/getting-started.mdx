@@ -1,0 +1,61 @@
+---
+title: 導入
+description: パッケージの入れ方と Tailwind への組み込み方。
+---
+
+## インストール
+
+```bash
+npm install @nfmmu/udon-react
+```
+
+React 18 以降が必要です。
+
+## トークンを読み込む
+
+```ts
+import "@nfmmu/udon-react/tokens.css";
+```
+
+## Tailwind CSS
+
+### v3
+
+```js
+// tailwind.config.js
+import udon from "@nfmmu/udon-react/tailwind-preset";
+
+export default {
+  presets: [udon],
+  content: ["./src/**/*.{ts,tsx}", "./node_modules/@nfmmu/udon-react/dist/**/*.js"],
+};
+```
+
+### v4
+
+`tokens.css` を読み込めば、`var(--udon-primary)` などの変数がそのまま使えます。ユーティリティに載せたい場合は `@theme` で色を定義してください。
+
+```css
+@import "tailwindcss";
+@import "@nfmmu/udon-react/tokens.css";
+
+@theme {
+  --color-udon-primary: var(--udon-primary);
+  --color-udon-text: var(--udon-text);
+}
+```
+
+## 使い方
+
+```tsx
+import { Button, TextField } from "@nfmmu/udon-react";
+
+export function Form() {
+  return (
+    <form className="flex flex-col gap-4">
+      <TextField label="タイトル" placeholder="入力してください" />
+      <Button type="submit">保存する</Button>
+    </form>
+  );
+}
+```

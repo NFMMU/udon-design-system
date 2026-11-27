@@ -1,0 +1,20 @@
+---
+title: Tooltip
+description: 補足を短く添える。
+---
+
+import { Tooltip, Button } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Tooltip label="補足をここに"><Button variant="ghost">ホバー</Button></Tooltip>
+</div>
+
+## 使い方
+
+```tsx
+<Tooltip label="補足"><span>対象</span></Tooltip>
+```
+
+## 状態と注意
+
+押して初めて分かる情報を入れない。

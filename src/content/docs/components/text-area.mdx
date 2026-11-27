@@ -1,0 +1,21 @@
+---
+title: TextArea
+description: 複数行のテキスト入力。
+---
+
+import { TextArea } from "@nfmmu/udon-react";
+
+<div class="example">
+  <TextArea label="説明" assistiveText="200文字以内" />
+  <TextArea label="エラー" invalid invalidText="入力に誤りがあります" />
+</div>
+
+## 使い方
+
+```tsx
+<TextArea label="説明" rows={4} />
+```
+
+## 状態と注意
+
+TextField と同じ状態を持つ。

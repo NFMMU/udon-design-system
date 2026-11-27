@@ -1,0 +1,21 @@
+---
+title: TextEllipsis
+description: 長い文字列の省略表示。
+---
+
+import { TextEllipsis } from "@nfmmu/udon-react";
+
+<div class="example">
+  <TextEllipsis>長いテキストが入るときは末尾を省略します。ホバーで全体を見せます。</TextEllipsis>
+  <TextEllipsis lines={2}>複数行にわたるテキストは、指定した行数で切ります。全文は詳細画面で読めます。</TextEllipsis>
+</div>
+
+## 使い方
+
+```tsx
+<TextEllipsis lines={2}>{text}</TextEllipsis>
+```
+
+## 状態と注意
+
+省略した場合は title 属性か詳細画面で全文を読めるようにする。

@@ -1,0 +1,22 @@
+---
+title: IconButton
+description: アイコンだけの操作。読み上げ名を必ず付ける。
+---
+
+import { IconButton, Icon } from "@nfmmu/udon-react";
+
+<div class="example">
+  <IconButton label="追加"><Icon name="追加" /></IconButton>
+  <IconButton label="選択中" active><Icon name="チェック" /></IconButton>
+  <IconButton label="無効" disabled><Icon name="閉じる" /></IconButton>
+</div>
+
+## 使い方
+
+```tsx
+<IconButton label="追加"><Icon name="追加" /></IconButton>
+```
+
+## 状態と注意
+
+label は必須。active で選択状態。

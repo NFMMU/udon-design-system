@@ -1,0 +1,22 @@
+---
+title: Avatar
+description: 利用者や作者のアイコン。
+---
+
+import { Avatar } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Avatar name="あかつき" />
+  <Avatar name="ゆいと" size="sm" />
+  <Avatar name="確認済み" badge />
+</div>
+
+## 使い方
+
+```tsx
+<Avatar name={user.name} badge={user.verified} />
+```
+
+## 状態と注意
+
+画像がない場合は頭文字を出す。

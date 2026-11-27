@@ -1,0 +1,34 @@
+---
+title: デザイントークン
+description: CSS 変数と Tailwind プリセット。
+---
+
+## CSS 変数
+
+| 変数 | 値 |
+| --- | --- |
+| `--udon-bg` | `#FFFFFF` |
+| `--udon-panel` | `#E5E1DA` |
+| `--udon-line` | `#E2D3BC` |
+| `--udon-line-strong` | `#C6C2BA` |
+| `--udon-text` | `#3A2A1C` |
+| `--udon-muted` | `#6B5744` |
+| `--udon-primary` | `#99661A` |
+| `--udon-secondary` | `#E9D0A6` |
+| `--udon-accent` | `#C8452D` |
+| `--udon-success` | `#2F6B45` |
+| `--udon-info` | `#2F5F7A` |
+| `--udon-radius-sm` | `4px` |
+| `--udon-radius-md` | `8px` |
+| `--udon-radius-lg` | `12px` |
+
+余白は 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64。幅は本文 720、一覧 1680、最小 320。ブレイクポイントは 640 / 960 / 1280 / 1680。
+
+## Tailwind
+
+```js
+import udon from "@nfmmu/udon-react/tailwind-preset";
+export default { presets: [udon], content: ["./src/**/*.{ts,tsx}"] };
+```
+
+クラス例: `bg-udon-primary`、`text-udon-text`、`border-udon-line`、`rounded-udon-md`、`font-udon-heading`。

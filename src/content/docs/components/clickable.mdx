@@ -1,0 +1,21 @@
+---
+title: Clickable
+description: リンクやカード全体のクリック領域。
+---
+
+import { Clickable } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Clickable>リンク</Clickable>
+  <Clickable disabled>無効なリンク</Clickable>
+</div>
+
+## 使い方
+
+```tsx
+<Clickable onClick={open}>リンク</Clickable>
+```
+
+## 状態と注意
+
+ボタン要素として扱う。下線はホバー時に出す。

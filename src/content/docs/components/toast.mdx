@@ -1,0 +1,21 @@
+---
+title: Toast
+description: 一時的な通知。
+---
+
+import { Toast } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Toast>保存しました</Toast>
+  <Toast status="error">保存できませんでした</Toast>
+</div>
+
+## 使い方
+
+```tsx
+<Toast>保存しました</Toast>
+```
+
+## 状態と注意
+
+画面の隅に短く出す。読み上げは role=status に任せる。

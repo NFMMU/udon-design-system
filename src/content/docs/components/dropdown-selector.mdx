@@ -1,0 +1,21 @@
+---
+title: DropdownSelector
+description: 単一の選択肢から選ぶ。
+---
+
+import { DropdownSelector } from "@nfmmu/udon-react";
+
+<div class="example">
+  <DropdownSelector label="区分" assistiveText="ひとつ選んでください" options={[{value:"all",label:"すべて"},{value:"public",label:"公開"},{value:"draft",label:"下書き"}]} />
+  <DropdownSelector label="エラー" invalid invalidText="選択してください" options={[{value:"a",label:"選択肢"}]} />
+</div>
+
+## 使い方
+
+```tsx
+<DropdownSelector label="区分" options={options} value={value} onChange={(e) => setValue(e.currentTarget.value)} />
+```
+
+## 状態と注意
+
+選択肢が多いときは検索付きの独自 UI を検討する。

@@ -1,0 +1,23 @@
+---
+title: Button
+description: 主要な操作。1画面に1つまで。
+---
+
+import { Button } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Button>保存する</Button>
+  <Button variant="secondary">取り消す</Button>
+  <Button variant="ghost">あとで</Button>
+  <Button variant="danger" disabled>削除する</Button>
+</div>
+
+## 使い方
+
+```tsx
+<Button variant="primary" onClick={save}>保存する</Button>
+```
+
+## 状態と注意
+
+variant は primary / secondary / ghost / danger。disabled で操作不可。

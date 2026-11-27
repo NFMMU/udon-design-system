@@ -1,0 +1,22 @@
+---
+title: Radio
+description: 排他的な単一選択。
+---
+
+import { Radio } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Radio name="sample" label="選択肢 A" defaultChecked />
+  <Radio name="sample" label="選択肢 B" />
+  <Radio name="sample" label="無効" disabled />
+</div>
+
+## 使い方
+
+```tsx
+<Radio name="plan" label="A" value="a" checked={plan === "a"} onChange={() => setPlan("a")} />
+```
+
+## 状態と注意
+
+同じ name でグループにする。

@@ -1,0 +1,21 @@
+---
+title: Pagination
+description: ページ移動。
+---
+
+import { Pagination } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Pagination page={2} totalPages={5} />
+  <Pagination size="sm" page={1} totalPages={3} />
+</div>
+
+## 使い方
+
+```tsx
+<Pagination page={page} totalPages={total} onChange={setPage} />
+```
+
+## 状態と注意
+
+現在ページは aria-current で示す。

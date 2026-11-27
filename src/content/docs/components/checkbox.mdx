@@ -1,0 +1,22 @@
+---
+title: Checkbox
+description: 複数の選択肢から選ぶ。
+---
+
+import { Checkbox } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Checkbox label="同意する" defaultChecked />
+  <Checkbox label="未選択" />
+  <Checkbox label="無効" disabled />
+</div>
+
+## 使い方
+
+```tsx
+<Checkbox label="同意する" checked={agreed} onChange={(e) => setAgreed(e.currentTarget.checked)} />
+```
+
+## 状態と注意
+
+ラベルは必ず付ける。単独のオン・オフは Switch を使う。

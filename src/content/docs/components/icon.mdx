@@ -1,0 +1,22 @@
+---
+title: Icon
+description: 24px グリッドの線アイコン。
+---
+
+import { Icon } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Icon name="検索" />
+  <Icon name="履歴" size={32} />
+  <Icon name="星" size={40} style={{ color: "var(--udon-accent)" }} />
+</div>
+
+## 使い方
+
+```tsx
+<Icon name="検索" size={24} />
+```
+
+## 状態と注意
+
+name は iconPaths のキー。色は currentColor を継承する。

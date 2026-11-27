@@ -1,0 +1,20 @@
+---
+title: Breadcrumb
+description: 現在地と戻り道。
+---
+
+import { Breadcrumb } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Breadcrumb items={[{label:"ホーム",href:"/"},{label:"一覧",href:"/list"},{label:"詳細"}]} />
+</div>
+
+## 使い方
+
+```tsx
+<Breadcrumb items={items} />
+```
+
+## 状態と注意
+
+最後の項目はリンクにしない。

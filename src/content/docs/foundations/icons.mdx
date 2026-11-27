@@ -1,0 +1,22 @@
+---
+title: アイコン
+description: 24px グリッド・線1.75・線端は丸め。
+---
+
+import { Icon, iconPaths } from "@nfmmu/udon-react";
+
+```tsx
+import { Icon } from "@nfmmu/udon-react";
+
+<Icon name="検索" />
+<Icon name="履歴" size={32} />
+```
+
+<div class="example" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 1rem;">
+  {Object.keys(iconPaths).map((name) => (
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: var(--udon-text);">
+      <Icon name={name} size={32} />
+      <span style="font-size: 11px; color: var(--udon-muted);">{name}</span>
+    </div>
+  ))}
+</div>

@@ -1,0 +1,21 @@
+---
+title: Switch
+description: 即時反映のオン・オフ。
+---
+
+import { Switch } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Switch label="有効" defaultChecked />
+  <Switch label="無効" />
+</div>
+
+## 使い方
+
+```tsx
+<Switch label="通知を受け取る" checked={on} onChange={(e) => setOn(e.currentTarget.checked)} />
+```
+
+## 状態と注意
+
+保存ボタンを押してから反映する設定には Checkbox を使う。

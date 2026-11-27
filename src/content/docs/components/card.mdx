@@ -1,0 +1,21 @@
+---
+title: Card
+description: 1つの対象をまとめる面。
+---
+
+import { Card } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Card title="カードのタイトル" description="本文がここに入ります。2行までを目安にします。" meta="補足 / 2026-11-27" />
+  <Card selectable title="選択中" description="枠を 2px にして状態を示します。" />
+</div>
+
+## 使い方
+
+```tsx
+<Card title={title} description={description} onClick={open} />
+```
+
+## 状態と注意
+
+カード全体を押せるようにする。

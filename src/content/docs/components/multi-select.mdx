@@ -1,0 +1,20 @@
+---
+title: MultiSelect
+description: 複数のタグを選ぶ。
+---
+
+import { MultiSelect } from "@nfmmu/udon-react";
+
+<div class="example">
+  <MultiSelect label="タグ" values={["タグ A"]} options={["タグ A","タグ B","タグ C"]} />
+</div>
+
+## 使い方
+
+```tsx
+<MultiSelect label="タグ" values={values} options={options} onChange={setValues} />
+```
+
+## 状態と注意
+
+選択済みはチップで表示し、外せるようにする。

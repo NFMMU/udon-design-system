@@ -1,0 +1,21 @@
+---
+title: Snackbar
+description: 操作結果の短い通知。
+---
+
+import { Snackbar } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Snackbar>削除しました</Snackbar>
+  <Snackbar status="error">保存できませんでした</Snackbar>
+</div>
+
+## 使い方
+
+```tsx
+<Snackbar action={<Clickable>元に戻す</Clickable>}>削除しました</Snackbar>
+```
+
+## 状態と注意
+
+取り消せる操作のあとに出す。

@@ -1,0 +1,20 @@
+---
+title: Carousel
+description: 横並びのコンテンツ。
+---
+
+import { Carousel } from "@nfmmu/udon-react";
+
+<div class="example">
+  <Carousel items={["1枚目", "2枚目", "3枚目"]} />
+</div>
+
+## 使い方
+
+```tsx
+<Carousel items={items} label="おすすめ" />
+```
+
+## 状態と注意
+
+自動再生はしない。操作で止められるようにする。

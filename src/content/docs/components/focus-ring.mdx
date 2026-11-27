@@ -1,0 +1,20 @@
+---
+title: FocusRing
+description: キーボード操作時に、フォーカス中の要素へ出す輪。
+---
+
+import { FocusRing, Button } from "@nfmmu/udon-react";
+
+<div class="example">
+  <FocusRing><Button>保存する</Button></FocusRing>
+</div>
+
+## 使い方
+
+```tsx
+<FocusRing><Button>保存する</Button></FocusRing>
+```
+
+## 状態と注意
+
+実装では :focus-visible を使う。輪は 2px、要素から 2px 外側。

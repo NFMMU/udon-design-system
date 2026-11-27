@@ -1,0 +1,21 @@
+---
+title: HintText
+description: 入力の補足説明。
+---
+
+import { HintText } from "@nfmmu/udon-react";
+
+<div class="example">
+  <HintText>補足の説明をここに書きます。</HintText>
+  <HintText status="error">入力内容を確認してください。</HintText>
+</div>
+
+## 使い方
+
+```tsx
+<HintText status={invalid ? "error" : "default"}>32文字以内</HintText>
+```
+
+## 状態と注意
+
+エラーは色と文の両方で示す。アイコンは Icon_情報 と同形。

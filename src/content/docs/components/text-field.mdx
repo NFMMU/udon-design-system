@@ -1,0 +1,22 @@
+---
+title: TextField
+description: 1行のテキスト入力。
+---
+
+import { TextField } from "@nfmmu/udon-react";
+
+<div class="example">
+  <TextField label="タイトル" assistiveText="32文字以内" placeholder="入力してください" />
+  <TextField label="エラー" invalid invalidText="入力に誤りがあります" defaultValue="宵々古今" />
+  <TextField label="無効" disabled defaultValue="入力できません" />
+</div>
+
+## 使い方
+
+```tsx
+<TextField label="タイトル" value={value} onChange={(e) => setValue(e.currentTarget.value)} />
+```
+
+## 状態と注意
+
+invalid のときは枠を 2px にし、色だけでなく太さでも示す。
