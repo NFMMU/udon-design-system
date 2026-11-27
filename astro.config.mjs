@@ -4,8 +4,7 @@ import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  site: "https://nfmmu.github.io",
-  base: "/udon-design-system",
+  site: "https://design.udonya.moe",
   integrations: [
     starlight({
       title: "全国もちもちうどん連盟 デザインシステム",
