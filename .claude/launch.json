@@ -1,10 +1,10 @@
 {
-  "version": "0.0.1",
-  "configurations": [
-    {
-      "name": "live",
-      "url": "https://design.udonya.moe",
-      "port": 443
-    }
-  ]
+	"version": "0.0.1",
+	"configurations": [
+		{
+			"name": "live",
+			"url": "https://design.udonya.moe",
+			"port": 443
+		}
+	]
 }
