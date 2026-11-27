@@ -9,8 +9,6 @@ npm install
 npm run dev
 ```
 
-`@nfmmu/udon-react` は `file:../udon-react` を参照します。先にパッケージ側で `npm install && npm run build` を実行してください。
-
 ## 構成
 
 - `src/content/docs/` — 本文（MDX）
