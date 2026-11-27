@@ -1,42 +1,48 @@
 name: Deploy to GitHub Pages
 
+# NFMMU の組織ポリシーにより、Actions はフル SHA 固定が必要。
+# withastro/action は内部で upload-pages-artifact を使い、さらに
+# upload-artifact を固定 SHA で参照しないため、gh-pages ブランチへ
+# 直接配備する方式にしている。
+
 on:
-  # `main`ブランチにプッシュするたびにワークフローをトリガーします。
-  # 別のブランチを使用している場合は、`main`をそのブランチ名に置き換えてください。
   push:
-    branches: [ main ]
-  # GitHub上のActionsタブからこのワークフローを手動で実行できます。
+    branches: [main]
   workflow_dispatch:
 
-# このジョブがリポジトリをクローンし、ページデプロイメントを作成することを許可します。
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v7
-      - name: Install, build, and upload your site
-        uses: withastro/action@v6
-        # with:
-          # path: . # リポジトリ内のAstroプロジェクトのルート位置です。（オプション）
-          # node-version: 24 # サイトのビルドに使用するNodeのバージョンです。デフォルトは24です。（オプション）
-          # package-manager: pnpm@latest # 依存関係のインストールとサイトのビルドに使用するNodeパッケージマネージャーです。ロックファイルに基づいて自動検出されます。（オプション）
-          # build-cmd: pnpm run build # サイトをビルドするためのコマンドです。デフォルトでパッケージのbuildスクリプトを実行します。（オプション）
-        # env:
-          # PUBLIC_POKEAPI: 'https://pokeapi.co/api/v2' # 変数の値にはシングルクォートを使用してください。（オプション）
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Publish to gh-pages
+        run: |
+          cd dist
+          git init -q
+          git checkout -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "deploy: ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
