@@ -10,11 +10,11 @@
     "check": "astro check"
   },
   "dependencies": {
-    "@astrojs/react": "^4.2.0",
+    "@astrojs/react": "^7.0.0",
     "@astrojs/starlight": "^0.43.0",
     "@nfmmu/udon-react": "^0.1.0",
     "@tailwindcss/vite": "^4.0.0",
-    "astro": "^5.4.0",
+    "astro": "^7.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^4.0.0"
