@@ -23,12 +23,6 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Clone component package
-        run: git clone --depth 1 https://github.com/NFMMU/udon-react.git ../udon-react
-
-      - name: Build component package
-        run: cd ../udon-react && npm ci && npm run build
-
       - name: Install
         run: npm ci
 
