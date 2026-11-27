@@ -1,5 +1,5 @@
 allowBuilds:
-  esbuild: set this to true or false
+  esbuild: true
   sharp: set this to true or false
 minimumReleaseAgeExclude:
   - "@nfmmu/udon-react@0.1.0"
