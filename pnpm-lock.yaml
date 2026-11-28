@@ -16,7 +16,7 @@ importers:
         version: 0.43.2(astro@5.18.2(@types/node@26.6.11)(jiti@2.7.0)(lightningcss@1.33.0)(rollup@4.68.8)(typescript@5.9.3)(yaml@2.9.1))(typescript@5.9.3)
       '@nfmmu/udon-react':
         specifier: ^0.1.0
-        version: 0.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 0.1.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.5(vite@6.4.6(@types/node@26.6.11)(jiti@2.7.0)(lightningcss@1.33.0)(yaml@2.9.1))
@@ -805,8 +805,8 @@ packages:
       '@emnapi/core': ^1.7.1 || 2.0.0-beta.2 || 2.0.0-beta.3
       '@emnapi/runtime': ^1.7.1 || 2.0.0-beta.2 || 2.0.0-beta.3
 
-  '@nfmmu/udon-react@0.1.0':
-    resolution: {integrity: sha512-cyihJXqkqoOsUSMVOzmPGe7561aGz1ZJ/Xg9UdASG24faGlEGifkKawPnCTj7WMSAq+o5wp7scS6TIgCVupXKQ==}
+  '@nfmmu/udon-react@0.1.1':
+    resolution: {integrity: sha512-G93/G45tEtoJKcMMwvxuM9tQ7EfY9aZ/OjUjx677O3Mc7gOSTRtja+PNFoSpbmkNOiKsvpi2O/EiZiYIsl/ttQ==}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
@@ -3142,7 +3142,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.5
     optional: true
 
-  '@nfmmu/udon-react@0.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nfmmu/udon-react@0.1.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
