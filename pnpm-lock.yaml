@@ -15,7 +15,7 @@ importers:
         specifier: 7.1.9
         version: 7.1.9(@types/react-dom@19.3.0(@types/react@19.3.3))(@types/react@19.3.3)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)(vite@8.4.0(@types/node@26.6.11)(jiti@2.7.0)(yaml@2.9.1))
       '@astrojs/starlight':
-        specifier: 0.43.2
+        specifier: ^0.43.2
         version: 0.43.2(astro@7.4.13(@types/node@26.6.11)(jiti@2.7.0)(yaml@2.9.1))(typescript@6.0.3)
       '@nfmmu/udon-react':
         specifier: ^0.1.0
